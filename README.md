@@ -1,1 +1,1 @@
-# techblog-mvc-demo
+# technologyblog-mvc
