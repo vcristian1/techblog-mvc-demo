@@ -1,9 +1,31 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+<div class="card mb-5">
+  <div class="card-header">
+    <div class="text-center">
+      <h2>{{name}}</h2>
+      <p>{{description}}</p>
+      <p>Created by {{user.name}} on {{format_date date_created}}</p>
+      <p>
+        <button class="btn btn-primary">Reply</button>
+        <a href="/" class="p-2 btn btn-sm btn-danger">Go Back</a>
+      </p>
+    </div>
+  </div>
 </div>
+
+{{#each projects as |project| }}
+<div class="card mb-5">
+  <div class="card-header">
+    <h6>
+      <!-- Call helper function with triple brackets to render data as HTML -->
+      <a class="text-decoration-none" href="/project/{{project.id}}">{{project.name}}</a>
+    </h6>
+  </div>
+  <div class="card-body">
+    <p>{{project.description}}</p>
+    <footer class="blockquote-footer">{{project.user.name}}</footer>
+  </div>
+  <div class="card-footer text-muted">
+   <p> Posted on {{format_date project.date_created}}</p>
+  </div>
+</div>
+{{/each}}
