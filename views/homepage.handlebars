@@ -1,4 +1,4 @@
-<!-- Loop over each object in the projects array -->
+{{!-- <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
 <div class="card row mb-4 project">
   <div class="col-md-5">
@@ -13,6 +13,23 @@
     <p>
       {{project.description}}
     </p>
+  </div>
+</div> --}}
+
+{{#each projects as |project| }}
+<div class="card mb-5">
+  <div class="card-header">
+    <h6>
+      <!-- Call helper function with triple brackets to render data as HTML -->
+      <a class="text-decoration-none" href="/project/{{project.id}}">{{project.name}}</a>
+    </h6>
+  </div>
+  <div class="card-body">
+    <p>{{project.description}}</p>
+    <footer class="blockquote-footer">{{project.user.name}}</footer>
+  </div>
+  <div class="card-footer text-muted">
+   <p> Posted on {{format_date project.date_created}}</p>
   </div>
 </div>
 {{/each}}
