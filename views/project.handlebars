@@ -1,11 +1,14 @@
 <div class="card mb-5">
   <div class="card-header">
-    <div class="text-center">
-      <h2>{{name}}</h2>
-      <p>{{description}}</p>
-      <p>Created by {{user.name}} on {{format_date date_created}}</p>
-    </div>
+    <h6>{{name}}</h2>
   </div>
+  <div class="card-body">
+    <p>{{description}}</p>
+    <footer class="blockquote-footer">{{user.name}}</footer>
+  </div>
+  <div class="card-footer text-muted">
+      <p> Posted on {{format_date date_created}}</p>
+    </div>
 </div>
 
 {{!-- Previous comments --}}
@@ -25,8 +28,10 @@
 {{!-- Comment submission Allowed only if logged in--}}
 {{#if logged_in}}
 <div class="post card">
+  <div class="card-header">
+    <h6>Comment</h6>
+  </div>
     <form id="new-comment-form" class="card-body">
-      <h4>Comment</h4>
         <div>
           <label for="post-body" class="form-label"></label>
           <textarea name="comment-body" type="text" id="post-body" class="form-textarea form-input"></textarea>
