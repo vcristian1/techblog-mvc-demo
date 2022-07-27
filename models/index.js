@@ -6,7 +6,7 @@ User.hasMany(Post, {
   foreignKey: 'user_id'
 });
 
-Post.belongsTo(User, {
+Project.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
@@ -22,7 +22,7 @@ User.hasMany(Comment, {
   foreignKey: 'user_id'
 });
 
-Post.hasMany(Comment, {
+Project.hasMany(Comment, {
   foreignKey: 'post_id'
 });
 

@@ -19,6 +19,7 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
+      layout: 'main',
       projects, 
       logged_in: req.session.logged_in 
     });
@@ -27,6 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//Get a single post
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
@@ -35,6 +37,10 @@ router.get('/project/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Comment,
+          attributes: ['id','comment_text','post_id', 'user_id', 'date_created'],
+      },
       ],
     });
 
