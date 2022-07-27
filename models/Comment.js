@@ -9,13 +9,6 @@ Comment.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        project_id: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'project',
-              key: 'id',
-            },
-          },
     },
     {
         sequelize,
