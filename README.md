@@ -5,7 +5,7 @@
 A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
 
 ## Disclaimer
-Originally ran into issues deploying this project to Heroku, and had to create a new repository to re attempt to deploy to Heroku. This repo was the first created and was unable to be deployed to Heroku due to not deploying the starter code to Heroku from the beggining before actually building the application from the ground up. [Completed Repository](https://github.com/vcristian1/technologyblog-mvc)<br>
+Originally ran into issues deploying this project to Heroku, and had to create a new repository to re attempt to deploy to Heroku. This repo was the first created and was unable to be deployed to Heroku due to not deploying the starter code to Heroku from the beggining before actually building the application from the ground up. [Completed Repository](https://github.com/vcristian1/mvc-techblog-demo)<br>
 
 
 ## User Story
