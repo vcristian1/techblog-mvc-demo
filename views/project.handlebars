@@ -14,13 +14,13 @@
 {{!-- Previous comments --}}
 {{#each Comments as |comment| }}
 <div class="post card">
-    <h1 class="card-header com-header"></h1>
+    <h1 class="card-header com-header">{{post_id}}</h1>
 
     <p class="card-body">
-        {{comment.body}}
+        {{comment_text}}
     </p>
     <p class="card-body">
-        ~ {{../User.username}}, {{format_date ../createdAt}}
+        ~ {{user.name}}, {{format_date date_created}}
     </p>
 </div>
 {{/each}}
@@ -48,4 +48,6 @@
 </div>
 {{/if}}
 
-<script src="/js/comment.js"></script>
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
