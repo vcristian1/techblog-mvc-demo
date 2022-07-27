@@ -12,7 +12,7 @@
 </div>
 
 {{!-- Previous comments --}}
-{{#each Comments as |comment| }}
+{{!-- {{#each Comments as |comment| }}
 <div class="post card">
     <h1 class="card-header com-header">{{post_id}}</h1>
 
@@ -23,7 +23,7 @@
         ~ {{user.name}}, {{format_date date_created}}
     </p>
 </div>
-{{/each}}
+{{/each}} --}}
 
 {{!-- Comment submission Allowed only if logged in--}}
 {{#if logged_in}}
